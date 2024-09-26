@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Tiltil';
+  src: url('../fonts/Tiltil-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('../fonts/zurich.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeuzeItOffice';
+  src: url('../fonts/neuzeitoffice.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing: border-box;  
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  --color-text: #111;
+  --color-background: #f1f0ee;
+  --color-header: #111;
+  --color-heading-text: #fff;
+  --font-primary: 'Zurich', sans-serif;
+  --font-heading: 'Tiltil', sans-serif;
+  --font-heading2:'NeuzeItOffice', sans-serif;
+}
+
+
+
+
+
+
+/************/
+/* ALGEMEEN */
+/************/
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  margin: 0; 
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+p {
+  color: var(--color-text);
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: 2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: var(--color-header);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header h1 {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  color: var(--color-heading-text);
+  text-align: center;
+}
+
+header > button:nth-of-type(1) {
+  order: -1;
+  background-color: transparent;
+  border: none;
+  padding: 0.25em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+header > button:nth-of-type(1) span {
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+}
+
+header nav:nth-of-type(1) {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  transform: translateX(-100%);
+}
+
+/* Search bar styling */
+header search {
+  order:1;
+  width: 100%; 
+  background-color: #f1f0ee;
+  padding: 0.5em;
+  position: relative;
+}
+
+header search label {
+  display: none; 
+}
+
+header search input {
+  width: 100%; 
+  padding: 0.75em; 
+  background-color: #f1f0ee; 
+  border: 1px;
+  border-color: #111;
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  color: var(--color-text); 
+}
+
+header search input::placeholder {
+  color: var(--color-text); 
+  text-align: left;
+}
+
+header search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; /* Verwijderd het kruisje in het input veld */
+}
+
+
+header search button {
+  position: absolute;
+  right: 1em; 
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25em; 
+  color: var(--color-text); 
+}
+
+header search button::before {
+  /* content: '🔍'; */
+}
+
+header nav:nth-of-type(2) {
+
+}
+
+header nav:nth-of-type(2) ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav:nth-of-type(2) img {
+  width:1em;
+
+}
+
+header p {
+  order: -2;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  text-decoration: underline;
+  color: var(--color-heading-text);
+}
+
+
+
+header nav:nth-of-type(1) {
+  position: fixed;
+  inset: 0;
+  background-color: #f1f0ee;
+  transform: translateX(-100%); /* Menu verborgen */
+  padding: 0.75em;
+  display: flex;
+  flex-direction: column; 
+  z-index: 10; /* Zorg dat het boven andere elementen komt */
+}
+
+header nav:nth-of-type(1) ul {
+  list-style: none; 
+}
+
+header nav:nth-of-type(1) li {
+  width: 100%;
+  border-bottom: 1px solid #111;
+}
+
+header nav:nth-of-type(1) li:last-child {
+  border-bottom: none; /* Geen lijn onder het laatste item */
+}
+
+header nav:nth-of-type(1) a {
+  display: block; 
+  padding: 1em 0; 
+  color: #111; 
+  text-transform: uppercase; 
+  font-size: 1.2em; 
+}
+
+
+
+
+
+/* Animatie voor het menu */
+nav.toonMenu button span:nth-of-type(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav.toonMenu button span:nth-of-type(2) {
+  opacity: 0;
+}
+
+nav.toonMenu button span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+header nav.toonMenu {
+  transform: translateX(0);
+}
+
+/*footer*/
+
+footer {
+  background-color: var(--color-header); 
+}
+
+footer p {
+  color: var(--color-heading-text);
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 1em;
+  padding-left: 1em;
+}
