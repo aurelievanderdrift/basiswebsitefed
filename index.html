@@ -3,13 +3,13 @@
 	
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Aurelie">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Things I Like Things I Love, opdracht FED</title>
+	<title>Things I Like Things I Love | Homepage</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link href="styles/styleindex.css" rel="stylesheet 2">
+	<link href="styles/styleindex.css" rel="stylesheet">
 	
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -18,114 +18,140 @@
 	<header>
 		<h1>Things I Like Things I Love</h1>
 
+		<button>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</button>
+
+
+
 		<nav>
 			<ul>
-			  <li><a href="">Kleding</a></li>
-			  <li><a href="">Interieur & Gifts</a></li>
-			  <li><a href="">Sieraden</a></li>
-			  <li><a href="">Accessoires</a></li>
-			  <li><a href="">Our Story</a></li>
-			  <li><a href="">Jobs</a></li>
-			  <li><a href="">Stores</a></li>
-			  <li><a href="">Giftcards</a></li>
+				<li><a href="#">Kleding</a></li>
+				<li><a lang="en" href="#">Interieur & Gifts</a></li>
+				<li><a href="#">Sieraden</a></li>
+				<li><a href="#">Accessoires</a></li>
+				<li><a href="#">Our Story</a></li>
+				<li><a lang="en" href="#">Jobs</a></li>
+				<li><a lang="en" href="#">Stores</a></li>
+				<li><a lang="en" href="#">Giftcards</a></li>
 			</ul>
 		</nav>
 
-		<a href="">help & faq</a>
-		<a href="">account</a>
+		<!-- <a lang="en" href="#">help & faq</a> -->
+		<!-- <a href="#">account</a> -->
 
-		<p>Waar ben je naar op zoek?</p>
-		<img src="" alt="vergrootglas">
+		<search>
+			<label for="search">zoeken</label>
+			<input id="search" type="search" placeholder="Waar ben je naar op zoek?">
+			<button aria-label="zoeken"><img src="" alt=""></button>
+		</search>
+
+		<nav>
+			<ul>
+				<li>
+					<select name="" id="">
+						<option value="🇳🇱">🇳🇱</option>
+						<option value="🇬🇧">🇬🇧</option>
+						<option value="🇩🇪">🇩🇪</option>
+					</select>
+				</li>
+				<li><a href="#">
+					<img src="images/iconen/winkelmandje.svg" alt="Winkelmandje">
+				</a></li>
+
+				<li><button href="#">
+					<img src="images/iconen/hartje.svg" alt="Wishlist">
+				</button></li>
+			
+			</ul>
+		</nav>
 
 		<p>vandaag besteld, morgen in huis</p>
-		<p>gratis verzending voor orders vanaf €75</p>
-		<p>retourtermijn van 14 dagen</p>
-
-		<img src="" alt="Nederlandse vlag">
-		<img src="" alt="Winkelmandje">
-		<img src="" alt="Wishlist">
+		<!-- nog extra tekstjes toevoegen die steeds veranderen. -->
 
 	</header>
 
 	<main>
 
-		<ul>
-			<li>
-			  <img src="" alt="Nieuw Kleding">
-			  <p>Nieuw Kleding</p>
-			</li>
-			<li>
-			  <img src="" alt="Nieuw Interieur">
-			  <p>Nieuw interieur</p>
-			</li>
-			<li>
-			  <img src="" alt="Herfst Collectie">
-			  <p>Herfst Collectie</p>
-			</li>
-			<li>
-			  <img src="" alt="Interieur Sale">
-			  <p>Interieur Sale</p>
-			</li>
-			<li>
-			  <img src="" alt="Back to Work">
-			  <p>Back to Work</p>
-			</li>
-			<li>
-			  <img src="" alt="Sieraden">
-			  <p>Sieraden</p>
-			</li>
-			<li>
-			  <img src="" alt="Zonnebrillen Sale">
-			  <p>Zonnebrillen Sale -40%</p>
-			</li>
-		</ul>
+		<section>
+			<ul>
+				<li>
+					<img src="images/bolletjes/nieuwinterieur.jpg" alt="Nieuw Interieur">
+					<p>Nieuw interieur</p>
+				</li>
+				<li>
+					<img src="images/bolletjes/fallcollection.jpg" alt="Herfst Collectie">
+					<p>Herfst Collectie</p>
+				</li>
+				<li>
+					<img src="images/bolletjes/interieursale.jpg" alt="Interieur Sale">
+					<p>Interieur Sale</p>
+				</li>
+				<li>
+					<img src="images/bolletjes/backtowork.jpg" alt="Back to Work">
+					<p>Back to Work</p>
+				</li>
+				<li>
+					<img src="images/bolletjes/zonnebrillensale.jpg" alt="Zonnebrillen Sale">
+					<p>Zonnebrillen Sale</p>
+				</li>
+			</ul>
+		</section>
 
-		<img src="" alt="hoofdbanner website">
 
+
+		<img src="images/banner/bannerautumnleavesvierkant.png" alt="hoofdbanner website">
+		<!--Schaalbaar maken, dit is 1080x1080px voor mobiel, voor desktop is er een bredere banner-->
 
 		<section>
 		
-			<h2>Winkel categorieën</h2>
+			<h2 aria-hidden="true">Winkel categorieën</h2>
 
-			<section>
-			  <h2>Interieur & Cadeaus</h2>
-			  <img src="" alt="Interieur & Gifts">
-			  <a href="">Interieur & Gifts</a>
-			</section>
+			<ul>
+				<li>
+			  		<h3>Interieur & Cadeaus</h2>
+			  		<img src="images/categorien/interieurcategorie.jpg" alt="Interieur & Gifts">
+			  		<a href="#">Interieur & Gifts</a>
+				</li>
 
-			<section>
-			  <h2>Kleding</h2>
-			  <img src="" alt="Kleding">
-			  <a href="">Kleding</a>
-			</section>
+				<li>
+			  		<h3>Kleding</h3>
+			  		<img src="images/categorien/kledingcategorie.jpg" alt="Kleding">
+			  		<a href="#">Kleding</a>
+				</li>
 
-			<section>
-			  <h2>Sieraden</h2>
-			  <img src="" alt="Sieraden">
-			  <a href="">Sieraden</a>
-			</section>
+				<li>
+			  		<h3>Sieraden</h2>
+			  		<img src="images/categorien/sieradencategorie.jpg" alt="Sieraden">
+			  		<a href="#">Sieraden</a>
+				</li>
 
-			<section>
-			  <h2>Accessoires</h2>
-			  <img src="" alt="Accessoires">
-			  <a href="">Accessoires</a>
-			</section>
+				<li>
+			  		<h3>Accessoires</h2>
+			  		<img src="images/categorien/accessoirescategorie.jpg" alt="Accessoires">
+			  		<a href="#">Accessoires</a>
+				</li>
+			</ul>
 
-		  </section>
+		</section>
 
-		<img src="" alt="banner new in">  
-		<img src="" alt="banner sieraden">
+		<section>
+			<img src="images/mini banners/newinbanner.png" alt="banner new in">  
+			<img src="images/mini banners/ bestsellersbanner.jpg" alt="banner bestsellers">
+			<button><img src="images/iconen/winkelmandje.svg" alt="winkelmandje"></button>
+		</section>
 
 		<section> 
 			<h2>nieuwe interieur & Gifts</h2>
 
 			<section>
-				<h2>Vase / Planter Medina Brown</h2>
 				<a href="">Vase / Planter Medina Brown</a>
 				<p>€59,99</p>
 				<p>new</p>
-				<img src="" alt="wishlist hartje">
-				<img src="" alt="vase planter medina brown">
+				<img src="images/iconen/hartje.svg" alt="wishlist hartje">
+				<img src="images/index/vaseplantermedina.jpg" alt="vase planter medina brown">
 			</section>
 
 			<!-- nog extra producten toevoegen -->
@@ -136,15 +162,35 @@
 
 			<h2>Instagram Feed</h2>
 
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
+			<img src="images/instagram feed/insta1.jpg" alt="verschillende gouden ringen">
+			<a href="#" aria-hidden="true">
+				<img src="" alt=""/>
+			</a>
+			
+			<img src="images/instagram feed/insta2.jpg" alt="model met zwart gilet met strikjes">
+			<a href="#" aria-hidden="true"></a>
+				<img src="" alt=""/>
+			</a>
+
+			<img src="images/instagram feed/insta3.jpg" alt="model met leger groene kimono">
+			<a href="#" aria-hidden="true"></a>
+				<img src="images/iconen/instagram.svg" alt="Instagram logo"/>
+			</a>
+
+			<img src="images/instagram feed/insta4.jpg" alt="model met zwarte top met strikjes">
+			<a href="#" aria-hidden="true"></a>
+			<img src="images/iconen/instagram.svg" alt="Instagram logo"/>
+			</a>
+
+			<img src="images/instagram feed/insta5.jpg" alt="tasje met blokkenpatroon in beige en groen">
+			<a href="#" aria-hidden="true"></a>
+			<img src="images/iconen/instagram.svg" alt="Instagram logo"/>
+			</a>
+
+			<img src="images/instagram feed/insta6.jpg" alt="twee modellen, linker model heeft een gestreepte trui, rechter model heeft een topje van mesh aan. ">
+			<a href="#" aria-hidden="true"></a>
+			<img src="images/iconen/instagram.svg" alt="Instagram logo"/>
+			</a>
 
 		</section>
 
@@ -164,19 +210,19 @@
 			<H2>Help & info</H2>
 
 			<ul>
-			  <li><a href="">Veelgestelde vragen</a></li>
-			  <li><a href="">Retourneren</a></li>
-			  <li><a href="">Contact</a></li>
-			  <li><a href="">Reviews</a></li>
+			  <li><a href="#">Veelgestelde vragen</a></li>
+			  <li><a href="#">Retourneren</a></li>
+			  <li><a href="#">Contact</a></li>
+			  <li><a href="#">Reviews</a></li>
 			</ul>
 
 			<H2>Over TILTIL</H2>
 
 			<ul>
-			  <li><a href="">Ons verhaal</a></li>
-			  <li><a href="">Winkels</a></li>
-			  <li><a href="">Vacatures</a></li>
-			  <li><a href="">Studentenkorting</a></li>
+			  <li><a href="#">Ons verhaal</a></li>
+			  <li><a href="#">Winkels</a></li>
+			  <li><a href="#">Vacatures</a></li>
+			  <li><a href="#">Studentenkorting</a></li>
 			</ul>
 		</nav>
 

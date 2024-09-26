@@ -98,6 +98,8 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   ### Agenda voor meeting
   samen met je groepje opstellen
 
+  Ik heb voor de feedback sessie op dit moment nog geen vragen. Ik wil wel graag weten of de html die ik heb opgeschreven nu goed is.
+
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
@@ -108,10 +110,8 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  -  LANG-tags toevoegen voor als er Engelse tekst tussen Nederlandse tekst staat. 
+  -  Uitleg gehad over wat een article is en wanneer je die gebruikt.
 
 </details>
 
@@ -125,7 +125,7 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Wat goed ging was de algemene stijling in CSS. Wat minder goed ging was de header, maar daar ben ik natuurlijk al bij geholpen. Het eerste wat ik nu wil afmaken zijn de header en footer. Ik ga daarna verder met het afmaken van de Homepagina, ik verwacht met de homepagina (naast header en footer) niet al te veel struggles meer mee te hebben. ...
 
 
   ### Agenda voor meeting
@@ -135,7 +135,10 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | ... 
+  
+  Aurelie:
+  aanroepen zonder classes en divs, ik heb een struggle op de homepagina hiermee.           | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -226,4 +229,15 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
 
 ## Bronnenlijst
 
-<details ope
+<details open>
+  <summary>continu bijhouden terwijl je werkt</summary>
+
+  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
+  Nb. ChatGpT en andere AI horen er ook bij.
+  Nb. Vermeld de bronnen ook in je code.
+
+  1. bron 1
+  2. bron 2
+  3. ...
+
+</details>
