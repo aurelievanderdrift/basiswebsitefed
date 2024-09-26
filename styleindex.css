@@ -1,0 +1,166 @@
+/* bolletjes */
+
+section:nth-of-type(1) ul {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 1rem; 
+  padding: 0;
+  margin-bottom: 0.5em;
+  margin-top: 1em; 
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+section:nth-of-type(1) li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px; 
+}
+
+section:nth-of-type(1) li img {
+  width: 100%;
+  height: auto;
+  max-width: 6em; 
+  max-height: 6em;  
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
+section:nth-of-type(1) li p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+  
+  /* Voor alle banners */
+  img[alt*="banner"], img[alt*="newinbanner"], img[alt*="bestsellersbanner"] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+
+  /* tweede sectie met de categorien */
+
+
+  /* Verberg visueel, maar laten zien voor screen readers bron: https://webaim.org/techniques/css/invisiblecontent/ */
+h2[aria-hidden="true"], h3 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  section:nth-of-type(2) ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding: 0;
+    overflow-x: auto;
+    list-style-type: none;
+  }
+  
+  section:nth-of-type(2) ul li {
+    position: relative;
+    width: 14em;
+    height: auto;
+    display:grid;
+
+  }
+  
+  section:nth-of-type(2) ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    grid-area: 1/1;
+  }
+  
+  /* hulp gehad van Choice met het positioneren van de A boven de IMG */
+
+  section:nth-of-type(2) ul a {
+    background-color: #000;
+    color: white;
+    padding: 1em 3em 1em 3em;
+    display:block;
+    grid-area: 1/1;
+    align-self: start;
+    margin-top: 12em;
+    cursor: pointer;
+  }
+
+  section:nth-of-type(2) ul a:nth-of-type(1) {
+    width: max-content;
+  }
+
+  section:nth-of-type(2) ul li:hover a {
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
+
+  section:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  section:nth-of-type(3) img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  section:nth-of-type(3) {
+    position: relative;
+    display: grid;
+  }
+  
+  section:nth-of-type(3) img:nth-of-type(2) {
+    grid-area: 1/1;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* banner met winkelmandje button */
+  
+  section:nth-of-type(3) button {
+    background-color: #000;
+    color: white;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    display: block;
+    grid-area: 1/1;
+    align-self: end; 
+    justify-self: end;
+    margin-bottom: 1em;
+    border-radius: 50%;
+  }
+  
+  section:nth-of-type(3) button img {
+    width: 2.5em;
+    height: auto;
+    object-fit: contain;
+    /* background-color: #000; */
+  }
+
+  /* nieuwe interieur en gifts slider */
+
+  /* section:nth-of-type(4) h2 { */
+    /* font-size: 1.5em; */
+  
+
+/* instagram feed */
+
+
+
+ 
+
