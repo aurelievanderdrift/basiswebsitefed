@@ -86,7 +86,7 @@ select {
   appearance: none;
   background-color: transparent;
   border: none;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 
@@ -140,6 +140,12 @@ header nav:nth-of-type(1) {
   transform: translateX(-100%);
 }
 
+header nav li button {
+  cursor: pointer;   
+  border: none;      
+  background-color: transparent; 
+}
+
 /* Search bar styling */
 header search {
   order:1;
@@ -184,14 +190,6 @@ header search button {
   cursor: pointer;
   font-size: 1.25em; 
   color: var(--color-text); 
-}
-
-header search button::before {
-  /* content: '🔍'; */
-}
-
-header nav:nth-of-type(2) {
-
 }
 
 header nav:nth-of-type(2) ul {
@@ -241,4 +239,42 @@ header nav:nth-of-type(1) li:last-child {
   border-bottom: none; /* Geen lijn onder het laatste item */
 }
 
-header nav:nth-of-ty
+header nav:nth-of-type(1) a {
+  display: block; 
+  padding: 1em 0; 
+  color: #111; 
+  text-transform: uppercase; 
+  font-size: 1.2em; 
+}
+
+/* Animatie voor het menu */
+nav.toonMenu button span:nth-of-type(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+nav.toonMenu button span:nth-of-type(2) {
+  opacity: 0;
+}
+
+nav.toonMenu button span:nth-of-type(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+header nav.toonMenu {
+  transform: translateX(0);
+}
+
+/*footer*/
+
+footer {
+  background-color: var(--color-header); 
+}
+
+footer p {
+  color: var(--color-heading-text);
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 1em;
+  padding-left: 1em;
+}

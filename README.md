@@ -144,10 +144,7 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Ik ben geholpen met mijn struggle van de homepagina. Ik was de enige van mijn groepje die aanwezig was dus ik kon makkelijk al mijn vragen stellen. 
 
 </details>
 
@@ -163,6 +160,10 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Er zijn best wat dingen verbeterd. Zo kan je nu makkelijk door de homepagina links navigeren. De navigatie werkt nu ook goed. 
+
+  Er waren ook een paar dingen die ik nog over het hoofd had gezien, die ga ik later nog even aanpassen. 
+
 </details>
 
 
@@ -177,6 +178,8 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Het gaat me deze week wat minder goed af, ik vind het positioneren met grid best lastig en dat moet ik op deze pagina behoorlijk veel doen. Ik heb best veel hulp gevraagd en ook gehad maar ik blijf het lastig vinden. 
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -187,6 +190,7 @@ De HTML invoeren ging goed, hier heb ik weinig tot geen moeite mee. Ik moet voor
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+Vragen over de Instagram feed en positioneren van de interieur slider. 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
