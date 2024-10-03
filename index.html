@@ -68,8 +68,7 @@
 			</ul>
 		</nav>
 
-		<p>vandaag besteld, morgen in huis</p>
-		<!-- nog extra tekstjes toevoegen die steeds veranderen. -->
+		<p>vandaag besteld, binnen 0-2 dagen in huis</p>
 
 	</header>
 
@@ -100,10 +99,20 @@
 			</ul>
 		</section>
 
+		<img src="images/banner/bannerautumnleavesbreed.png" alt="Model met een mintgroene trui met de tekst 'Autumn Leaves">
 
+		<!-- geprobeerd om de afbeelding te laten wisselen na 720px met picture tag, maar het werkt niet. ik denk dat het ligt aan de srcset. bron: https://www.reddit.com/r/HTML/comments/1c2xjok/media_queries_and_swapping_images_when_resizing/?tl=nl , https://medium.com/@woutervanderzee/responsive-images-with-srcset-and-sizes-fc434845e948 -->
 
-		<img src="images/banner/bannerautumnleavesvierkant.png" alt="foto van een model met een mint groene trui, op de afbeelding staat Autumn Leaves">
-		<!--Schaalbaar maken, dit is 1080x1080px voor mobiel, voor desktop is er een bredere banner-->
+		<!-- <picture> -->
+			<!-- Afbeelding voor schermen breder dan 720px -->
+			<!-- <source media="(min-width: 720px)" srcset="images/banner/bannerautumnleavesbreed.png"> -->
+			
+			<!-- Afbeelding voor kleinere schermen -->
+			<!-- <img  -->
+				<!-- src="images/banner/bannerautumnleavesvierkant.png"  -->
+				<!-- alt="Model met een mintgroene trui met de tekst 'Autumn Leaves"> -->
+		<!-- </picture> -->
+
 
 		<section>
 		
@@ -149,17 +158,35 @@
 			<section>
 				<ul>
 					<li>
-						<a href="">Vase / Planter Medina Brown</a>
+						<a href="#">Vaas Medina Bruin</a>
 						<p>€59,99</p>
 						<p>new</p>
 						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
-						<img src="images/index/vaseplantermedina.jpg" alt="Bruine vaas op een tafeltje, model zet er een bloem in">
+						<img src="images/index/vaseplantermedina.jpg" alt="Bruine vaas op een tafeltje, model zet er een bloem in.">
+					</li>	
+					<li>
+						<a href="#">Kandelaar Hout Casablanca</a>
+						<p>€29,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/candleholder-casablancawood.jpg" alt="Hout kleurige kandelaar die staat op een boekje.">
 					</li>		
+					<li>
+						<a href="#">Tafel Lamp Ebba Zwart</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
+					<li>
+						<a href="#">Draadloze Lamp Bruin</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
 				</ul>
-				  <!-- 2 kolommen, 1fr & 2 max content -->
 			</section>
-
-			<!-- nog extra producten toevoegen -->
 
 		</section>
 
@@ -216,34 +243,80 @@
 		<nav>
 			<h2>social media links</h2>
 			<ul>
-				<li><a href="#">Instagram</a></li>
-				<li><a href="#">Pinterest</a></li>
-				<li><a href="#">Tiktok</a></li>
-				<li><a href="#">Facebook</a></li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/intagram wit.png" alt="Instagram logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/pinterestwit.png" alt="Pinterest logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/tiktokwit.png" alt="Tiktok logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/facebookwit.png" alt="Facebook logo">
+				</a>
+			  </li>
 			</ul>
 		</nav>
+		  
+		  
 
 		<nav>
-			<H2>Help & info</H2>
-
-			<ul>
-			  <li><a href="#">Veelgestelde vragen</a></li>
-			  <li><a href="#">Retourneren</a></li>
-			  <li><a href="#">Contact</a></li>
-			  <li><a href="#">Reviews</a></li>
-			</ul>
+			<button class="accordion">Help & info</button>
+			<div class="panel">
+			  <ul>
+				<li><a href="#">Veelgestelde vragen</a></li>
+				<li><a href="#">Retourneren</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Reviews</a></li>
+			  </ul>
+			</div>
 		</nav>
-
+		  
 		<nav>
-			<H2>Over TILTIL</H2>
+			<button class="accordion">Over TILTIL</button>
+			<div class="panel">
+			  <ul>
+				<li><a href="#">Ons verhaal</a></li>
+				<li><a href="#">Winkels</a></li>
+				<li><a href="#">Vacatures</a></li>
+				<li><a href="#">Studentenkorting</a></li>
+			  </ul>
+			</div>
+		</nav>
+
+		<section>
+			<p>© 2024 Things I Like Things I Love </p>
+
+			<select>
+				<option value="🇳🇱">🇳🇱</option>
+				<option value="🇬🇧">🇬🇧</option>
+				<option value="🇩🇪">🇩🇪</option>
+			</select>
+
+			<h2>trustpilot en betaalmogelijkheden</h2>
+			<ul>
+				<li><img src="images/iconen/bancontact.png" alt="logo Bancontact"></li>
+				<li><img src="images/iconen/giropay.png" alt="logo Giropay"></li>
+				<li><img src="images/iconen/ideal.png" alt="logo Ideal"></li>
+				<li><img src="images/iconen/maestro.png" alt="logo Maestro"></li>
+				<li><img src="images/iconen/mastercard.png" alt="logo Mastercard"></li>
+				<li><img src="images/iconen/paypal.png" alt="logo Paypal"></li>
+				<li><img src="images/iconen/riverty.png" alt="logo Riverty"></li>
+			</ul>
 
 			<ul>
-			  <li><a href="#">Ons verhaal</a></li>
-			  <li><a href="#">Winkels</a></li>
-			  <li><a href="#">Vacatures</a></li>
-			  <li><a href="#">Studentenkorting</a></li>
+				<li><img src="images/iconen/trustpilot.png" alt="logo Trustpilot"></li>
+				<li><img src="images/iconen/trustpilotsterren.png" alt="5 sterren van Trustpilot"></li>
 			</ul>
-		</nav>
+		</section>
 
 	</footer>
 

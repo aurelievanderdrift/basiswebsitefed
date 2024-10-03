@@ -4,142 +4,318 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product pagina Things I Like Things I Love</title>
+
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/styleproduct.css" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
 		<h1>Things I Like Things I Love</h1>
 
+		<button>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</button>
+
+
+
 		<nav>
 			<ul>
-			  <li><a href="">Kleding</a></li>
-			  <li><a href="">Interieur & Gifts</a></li>
-			  <li><a href="">Sieraden</a></li>
-			  <li><a href="">Accessoires</a></li>
-			  <li><a href="">Our Story</a></li>
-			  <li><a href="">Jobs</a></li>
-			  <li><a href="">Stores</a></li>
-			  <li><a href="">Giftcards</a></li>
+				<li><a href="#">Kleding</a></li>
+				<li><a lang="en" href="#">Interieur & Gifts</a></li>
+				<li><a href="#">Sieraden</a></li>
+				<li><a href="#">Accessoires</a></li>
+				<li><a href="#">Our Story</a></li>
+				<li><a lang="en" href="#">Jobs</a></li>
+				<li><a lang="en" href="#">Stores</a></li>
+				<li><a lang="en" href="#">Giftcards</a></li>
 			</ul>
 		</nav>
 
-		<a href="">help & faq</a>
-		<a href="">account</a>
+		<!-- <a lang="en" href="#">help & faq</a> -->
+		<!-- <a href="#">account</a> -->
 
-		<p>Waar ben je naar op zoek?</p>
-		<img src="" alt="vergrootglas">
+		<search>
+			<label for="search">zoeken</label>
+			<input id="search" type="search" placeholder="Waar ben je naar op zoek?">
+			<button aria-label="zoeken"><img src="" alt=""></button>   		<!-- img toevoegen -->
+		</search>
 
-		<p>vandaag besteld, morgen in huis</p>
-		<p>gratis verzending voor orders vanaf €75</p>
-		<p>retourtermijn van 14 dagen</p>
+		<nav>
+			<ul>
+				<li>
+					<select name="" id="">
+						<option value="🇳🇱">🇳🇱</option>
+						<option value="🇬🇧">🇬🇧</option>
+						<option value="🇩🇪">🇩🇪</option>
+					</select>
+				</li>
+				<li><a href="#">
+					<img src="images/iconen/winkelmandjewit.png" alt="Winkelmandje">
+				</a></li>
 
-		<img src="" alt="Nederlandse vlag">
-		<img src="" alt="Winkelmandje">
-		<img src="" alt="Wishlist">
+				<li><button href="#">
+					<img src="images/iconen/hartjewit.png" alt="Wishlist">
+				</button></li>
+			
+			</ul>
+		</nav>
+
+		<p>vandaag besteld, binnen 0-2 dagen in huis</p>
 
 	</header>
 
     <main>
-        <h1>TILTIL Love Check Tee Black White Print</h1>
-        <p>€29,99</p>
-        <p>Coming soon! Summer must have! Een extra zachte, oversized tee van 100% katoen met LOVE print op de rug.</p>
+
+        <section>
+
+            <img src="images/kandelaar/kandelaar1.jpg" alt="Houten kandelaar op een boekje"/>
+            <p>New</p>
+            <img src="images/kandelaar/kandelaar2.jpg" alt="Close-up foto van de houten kandelaar"/>
+            <img src="images/kandelaar/kandelaar3.jpg" alt="Een hand houdt een kandelaar vast"/>
+            <img src="images/kandelaar/kandelaar4.jpg" alt="Kandelaar staat met drie beige kaarsen op een kast"/>
+            <img src="images/kandelaar/kandelaar5.jpg" alt="Kandelaar staat op een kast met links daarvan een lamp en een stoel"/>
+
+
+            <!-- <button href="#" aria-hidden="true">
+                <img src="images/iconen/pijllinkswit.png" alt="pijl naar links"/>
+            </button>
+            <button href="#" aria-hidden="true">
+                <img src="images/iconen/pijlrechtswit.png" alt="pijl naar rechts"/>
+            </button> -->
+
+        </section>
+
+        <section>
+            <h1>Kandelaar Casablanca Hout</h1>
+            <p>€29,99</p>
+            <p>Leuke houten kandelaar waar je drie kaarsen in kwijt kunt.  Perfect voor op de eettafel of op een dressoir.</p>
+        </section>
         
         <section>
-            <h2>size</h2>
-            <ul>
-                <li>extra small</li>
-                <li>small</li>
-                <li>medium</li>
-                <li>large</li>
-                <li>extra large</li>
+            <input type="number" min="1" max="6" value="1" aria-label="Aantal kandelaren" />
+            <button href="#">In winkelwagen</button>
+            <button href="#">
+                <img src="images/iconen/hartjewit.png" alt="Wishlist">
+            </button>
+        </section>
+        
 
-                <p>We adviseren je om je eigen maat aan te houden.</p>
+        <!-- bron voor input number: https://www.w3schools.com/tags/att_input_type_number.asp -->
+            
+
+        <section>
+            <ul>
+                <li>
+                    <img src="images/iconen/locatiewit.png" alt="locatie pin icoon" aria-hidden="true">
+                    <a href="#">Beschikbaarheid in tiltil winkel.</a>
+                </li>
+                <li>
+                    <img src="images/iconen/dooswit.png" alt="gesloten doos icoon" aria-hidden="true">
+                    <p>Vandaag besteld morgen in huis.</p>
+                </li>
+                <li>
+                    <img src="images/iconen/vrachtwagenwit.png" alt="snelle vrachtwagen icoon" aria-hidden="true">
+                    <p>Gratis verzending vanaf €75.</p>
+                </li>
+                <li>
+                    <img src="images/iconen/retourenwit.png" alt="boomerang pijl icoon" aria-hidden="true">
+                    <p>Retourneren binnen 14 dagen.</p>
+                </li>
+                <li>
+                    <img src="images/iconen/sterwit.png" alt="holle ster icoon" aria-hidden="true">
+                    <a href="#">4.5/5 score in TrustPilot.</a>
+                </li>
             </ul>
         </section>
+        
 
-        <button>In winkelwagen</button>
-
-        <ul>
-            <li><a href="">Beschikbaarheid in tiltil winkel.</a></li>
-            <li><p>Vandaag besteld morgen in huis.</p></li>
-            <li><p>Gratis verzending vanaf €75.</p></li>
-            <li><p>Retourneren binnen 14 dagen.</p></li>
-            <li><a href=""></a>4.5/5 score in TrustPilot.</li>
-        </ul>
+		<section>
+			<h2 class="accordion">Specificaties</h2>
+			<div class="panel">
+				<p>Size: lengte x breedte x hoogte = 13,3x13,3x26cm</p>
+				<p>Materiaal: hout</p>
+			</div>
+		</section>
+		
 
         <section>
-            <h2>Also available in:</h2>
-            <img src="" alt="foto van shirt in andere kleur">
-            <img src="" alt="foto van shirt in andere kleur">
+            <h2 class="accordion">Meer producten voor jou</h2>
+
+            <section class="panel">
+				<h2>Bekijk de producten</h2>
+				<ul>
+					<li>
+						<a href="#">Vaas Medina Bruin</a>
+						<p>€59,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/vaseplantermedina.jpg" alt="Bruine vaas op een tafeltje, model zet er een bloem in.">
+					</li>	
+					<li>
+						<a href="#">Kandelaar Hout Casablanca</a>
+						<p>€29,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/candleholder-casablancawood.jpg" alt="Hout kleurige kandelaar die staat op een boekje.">
+					</li>		
+					<li>
+						<a href="#">Tafel Lamp Ebba Zwart</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
+					<li>
+						<a href="#">Draadloze Lamp Bruin</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
+				</ul>
+			</section>
+
         </section>
 
-        <section>
-            <h2>details</h2>
-            <p>oversized</p>
-        </section>
+		<section>
+
+			<h2>Dit product delen</h2>
+			<button>
+				<img src="images/iconen/delenwit.png" alt="icoon voor het delen">
+			</button>
+
+		</section>
+
 
         <section>
-            <h2>specificaties</h2>
-            <p>Model & size: Our model wears size XS and is 172cm tall
+            <h2>Miscchien vind je dit ook leuk</h2>
 
-                Measurements: Maat S=
-                - Borstomvang: 52cm
-                - Totale lengte: 67cm
-                
-                Material: 100% Katoen
-                Care: Wasmachine (30), niet geschikt voor de droger</p>
-        </section>
+            <section>
+				<ul>
+					<li>
+						<a href="#">Vaas Medina Bruin</a>
+						<p>€59,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/vaseplantermedina.jpg" alt="Bruine vaas op een tafeltje, model zet er een bloem in.">
+					</li>	
+					<li>
+						<a href="#">Kandelaar Hout Casablanca</a>
+						<p>€29,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/candleholder-casablancawood.jpg" alt="Hout kleurige kandelaar die staat op een boekje.">
+					</li>		
+					<li>
+						<a href="#">Tafel Lamp Ebba Zwart</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
+					<li>
+						<a href="#">Draadloze Lamp Bruin</a>
+						<p>€69,99</p>
+						<p>new</p>
+						<img src="images/iconen/hartjewit.png" alt="wishlist hartje">
+						<img src="images/index/tablelam-ebba.jpg" alt="Zwart lampje op een kastje in een huiskamer setting.">
+					</li>	
+				</ul>
+			</section>
 
-        <section>
-            <h2>complete the look</h2>
-        </section>
-
-        <button>Deel dit product.</button>
-
-        <section>
-            <h2>You may also like</h2>
-            <img src="" alt="ander product">
-            <img src="" alt="ander product">
-            <img src="" alt="ander product">
-            <img src="" alt="ander product">
-            <img src="" alt="ander product">
-            <img src="" alt="ander product">
         </section>
 
     </main>
 
-    <footer>
+	<footer>
 		<p>We hope you like the Things we Love.</p>
 
-		<ul>
-			<li><a href="">Instagram</a></li>
-			<li><a href="">Pinterest</a></li>
-			<li><a href="">Tiktok</a></li>
-			<li><a href="">Facebook</a></li>
-		</ul>
 
 		<nav>
-			<H2>Help & info</H2>
-
+			<h2>social media links</h2>
 			<ul>
-			  <li><a href="">Veelgestelde vragen</a></li>
-			  <li><a href="">Retourneren</a></li>
-			  <li><a href="">Contact</a></li>
-			  <li><a href="">Reviews</a></li>
-			</ul>
-
-			<H2>Over TILTIL</H2>
-
-			<ul>
-			  <li><a href="">Ons verhaal</a></li>
-			  <li><a href="">Winkels</a></li>
-			  <li><a href="">Vacatures</a></li>
-			  <li><a href="">Studentenkorting</a></li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/intagram wit.png" alt="Instagram logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/pinterestwit.png" alt="Pinterest logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/tiktokwit.png" alt="Tiktok logo">
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <img src="images/iconen/facebookwit.png" alt="Facebook logo">
+				</a>
+			  </li>
 			</ul>
 		</nav>
+		  
+		  
 
+		<nav>
+			<button class="accordion">Help & info</button>
+			<div class="panel">
+			  <ul>
+				<li><a href="#">Veelgestelde vragen</a></li>
+				<li><a href="#">Retourneren</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Reviews</a></li>
+			  </ul>
+			</div>
+		</nav>
+		  
+		<nav>
+			<button class="accordion">Over TILTIL</button>
+			<div class="panel">
+			  <ul>
+				<li><a href="#">Ons verhaal</a></li>
+				<li><a href="#">Winkels</a></li>
+				<li><a href="#">Vacatures</a></li>
+				<li><a href="#">Studentenkorting</a></li>
+			  </ul>
+			</div>
+		</nav>
+
+		<section>
+			<p>© 2024 Things I Like Things I Love </p>
+
+			<select>
+				<option value="🇳🇱">🇳🇱</option>
+				<option value="🇬🇧">🇬🇧</option>
+				<option value="🇩🇪">🇩🇪</option>
+			</select>
+
+			<h2>trustpilot en betaalmogelijkheden</h2>
+			<ul>
+				<li><img src="images/iconen/bancontact.png" alt="logo Bancontact"></li>
+				<li><img src="images/iconen/giropay.png" alt="logo Giropay"></li>
+				<li><img src="images/iconen/ideal.png" alt="logo Ideal"></li>
+				<li><img src="images/iconen/maestro.png" alt="logo Maestro"></li>
+				<li><img src="images/iconen/mastercard.png" alt="logo Mastercard"></li>
+				<li><img src="images/iconen/paypal.png" alt="logo Paypal"></li>
+				<li><img src="images/iconen/riverty.png" alt="logo Riverty"></li>
+			</ul>
+
+			<ul>
+				<li><img src="images/iconen/trustpilot.png" alt="logo Trustpilot"></li>
+				<li><img src="images/iconen/trustpilotsterren.png" alt="5 sterren van Trustpilot"></li>
+			</ul>
+		</section>
 
 	</footer>
+
+	<script defer src="scripts/script.js"></script>
 
     
 </body>

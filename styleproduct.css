@@ -1,0 +1,451 @@
+/* Productfoto's */
+
+main section:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em;
+    position: relative; 
+}
+
+/* Grote afbeelding */
+main section:nth-of-type(1) > img:first-of-type {
+    width: 100%;
+    margin: 1em 0;
+}
+
+/* New-tag */
+main section:nth-of-type(1) > p {
+    background-color: white;
+    padding: 0.3em 0.7em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Zorgt ervoor dat de tag bovenop andere elementen staat */
+}
+
+/* Kleine afbeeldingen */
+main section:nth-of-type(1) > img:not(:first-of-type) {
+    width: calc(25% - 1em);
+}
+
+
+
+/* titel, prijs en beschrijving */
+
+main section:nth-of-type(2) {
+    margin-left: 1em; 
+    text-align: left;
+}
+
+
+main section:nth-of-type(2) h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+
+main section:nth-of-type(2) p:first-of-type {
+    font-size: 0.9em;
+    margin: 0.5em 0; 
+}
+
+
+main section:nth-of-type(2) p:last-of-type {
+    margin-top: 2em; 
+    font-size: 0.9em;
+}
+
+
+/* input, button en hartje */
+
+main section:nth-of-type(3) {
+    background-color: #f1f0ee;
+    color: black;
+    display: flex;
+    align-items: center; 
+    gap: 1em; 
+    padding: 1em; 
+}
+
+
+main section:nth-of-type(3) input[type="number"] {
+    max-width: 2em; 
+    background-color: #f1f0ee;
+    border: 1px solid #ffff; 
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: black;
+}
+
+
+main section:nth-of-type(3) button:not(:last-child) {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1em 5em;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+main section:nth-of-type(3) button:not(:last-child):hover {
+    transform: scale(1.10); 
+}
+
+main section:nth-of-type(3) button:not(:last-child):focus {
+    outline: 2px solid white; 
+    outline-offset: 2px; 
+}
+
+/* hartje */
+main section:nth-of-type(3) button img {
+    width: 2em; 
+    height: auto;
+    filter: invert(1);
+}
+
+main section:nth-of-type(3) button:last-child {
+    border: none
+}
+
+/* Flex voor knoppen en input */
+main section:nth-of-type(3) > * {
+    display: flex; 
+    align-items: center; 
+}
+
+
+
+/* usp's van TILTIL */
+main section:nth-of-type(4) {
+    display: grid;
+    grid-template-columns: auto; /* Eén kolom voor de lijst */
+    gap: 1em; 
+}
+
+main section:nth-of-type(4) ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+main section:nth-of-type(4) ul li {
+    display: grid; 
+    grid-template-columns: auto 1fr; /* Afbeelding links, tekst rechts */
+    gap: 0.5em; 
+    align-items: center; 
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+main section:nth-of-type(4) ul li img {
+    width: 1em; 
+    height: auto; 
+    filter: invert(1); 
+}
+
+main section:nth-of-type(4) ul li p {
+    font-size: 0.9em; 
+    margin: 0; 
+}
+
+main section:nth-of-type(4) ul li a {
+    font-size: 0.9em; 
+    margin: 0; 
+    text-decoration: underline; 
+}
+    
+main section:nth-of-type(4) ul li a:hover {
+    text-decoration: none; 
+}
+
+/* specificaties */
+main section:nth-of-type(5) {
+    border-top: 0.5px solid #000; 
+    border-bottom: 0.5px solid #000; 
+    margin: 1em 0;
+}
+
+main section:nth-of-type(5) h2 {
+    margin: 0;
+    font-size: 1.3em;
+    text-align: left;
+    cursor: pointer; 
+    padding: 1em 0.5em; 
+    position: relative; /* Voor het pijltje */
+    color: #000;
+}
+
+/* Pijltje toevoegen met outline bron: https://wpdean.com/css-accordion/ , stijlen van het pijltje: https://chatgpt.com/share/66fe58ec-11d8-8005-bc5f-b958c4416c04 */
+main section:nth-of-type(5) h2::after {
+    content: '';
+    position: absolute;
+    right: 0.5em; /* Plaatsing aan de rechterkant */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em; 
+    height: 1em; 
+    margin-left: 1em;
+    border: 0.5px solid #000; 
+    border-left: transparent; /* Verberg de linkerkant */
+    border-bottom: transparent; /* Verberg de onderkant */
+    transform: translateY(-50%) rotate(135deg); /* Pijltje naar beneden */
+    transition: transform 0.3s ease; 
+}
+
+/* Active staat voor de accordion (als geopend) */
+main section:nth-of-type(5) h2.active::after {
+    transform: translateY(-50%) rotate(-45deg); /* Pijltje omhoog */
+}
+
+main section:nth-of-type(5) .panel {
+    display: none; /* Verborgen */
+    overflow: hidden; 
+    background-color: #f1f0ee;
+}
+
+main section:nth-of-type(5) .panel p {
+    margin: 0;
+    font-size: 1em;
+    padding: 0.5em 0;
+}
+
+
+
+ /* Meer producten voor jou section */
+ main section:nth-of-type(6) ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+
+main section:nth-of-type(6) li {
+    display: grid;
+    grid-template-columns: 1fr max-content; /* Voor hartje en afbeelding */
+    grid-template-rows: auto auto 1fr; /* Voor naam, prijs, afbeelding */
+    background-color: #f0f0f0;
+    padding: 1rem;
+    align-items: start;
+    min-width: 20em;
+    position: relative;
+}
+
+
+main section:nth-of-type(6) li img:nth-of-type(2) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    width: 100%; 
+    height: auto;
+}
+
+
+main section:nth-of-type(6) li p:nth-of-type(1) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    margin: 0.5rem 0;
+}
+
+
+main section:nth-of-type(6) li p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: white;
+    padding: 0.3em 0.7em;
+    justify-self: start;
+    align-self: start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+main section:nth-of-type(6) li a {
+    grid-column: 1;
+    grid-row: 3;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* Hover*/
+main section:nth-of-type(6) li a:hover {
+    text-decoration: underline; 
+}
+
+/* Focus */
+main section:nth-of-type(6) li a:focus {
+    outline: 1px solid; 
+    outline-offset: 3px; 
+}
+
+
+main section:nth-of-type(6) li img:nth-of-type(1) {
+    width: 2em;
+    height: 2em;
+    position: absolute; 
+    justify-self: end;
+    align-self: end;
+    top: 10px;
+    right: 10px;
+    margin-top: 1.6em;
+    margin-right: 1em;
+}
+
+
+
+
+/* section met deel functie */
+
+
+main section:nth-of-type(7) {
+    display: flex;
+    align-items: center;
+    gap: 1em; 
+    margin: 1em 0; 
+}
+
+/* h2 weer verbergen maar zichtbaarhouden voor screenreader */
+main section:nth-of-type(7) h2 {
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    border: 0; 
+}
+
+
+main section:nth-of-type(7) button {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    margin-left: 1em;
+}
+
+
+main section:nth-of-type(7) button img {
+    width: 2em; 
+    height: auto; 
+    filter: invert(1); 
+}
+
+
+
+/* Misschien vind je dit ook leuk */
+
+
+section:nth-of-type(8) ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style-type: none;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    padding-bottom: 1rem; 
+  }
+  
+
+  section:nth-of-type(8) li {
+    display: grid;
+    grid-template-columns: 1fr max-content; /* Voor hartje en afbeelding */
+    grid-template-rows: auto auto 1fr; /* Voor naam, prijs, afbeelding */
+    background-color: #f0f0f0;
+    padding: 1rem;
+    align-items: start;
+    min-width: 20em; 
+    position: relative;
+  }
+  
+
+  section:nth-of-type(8) li img:nth-of-type(2) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    width: 100%; 
+    height: auto;
+  }
+  
+
+  section:nth-of-type(8) li p:nth-of-type(1) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    margin: 0.5rem 0;
+  }
+  
+
+  section:nth-of-type(8) li p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: white;
+    padding: 0.3em 0.7em;
+    justify-self: start;
+    align-self: start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+
+  section:nth-of-type(8) li a {
+    grid-column: 1;
+    grid-row: 3;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+
+  section:nth-of-type(8) li a:hover {
+    text-decoration: underline; 
+  }
+  
+
+  section:nth-of-type(8) li a:focus {
+    outline: 1px solid; 
+    outline-offset: 2px; 
+  }
+  
+
+  section:nth-of-type(8) li img:nth-of-type(1) {
+    width: 2em;
+    height: 2em;
+    position: absolute; 
+    justify-self: end;
+    align-self: end;
+    top: 10px;
+    right: 10px;
+    margin-top: 1.6em;
+    margin-right: 1em;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
