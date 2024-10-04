@@ -38,38 +38,36 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-  --color-text: #111;
-  --color-background: #f1f0ee;
-  --color-header: #111;
-  --color-heading-text: #fff;
+  color-scheme: light dark;
+  --color-black: #111;
+  --color-beige: light-dark(#f1f0ee, #515151);
+  --color-maintext: light-dark (#fff, #111);
+  --color-grey-dark: #515151;
+  --color-white: #fff;
   --font-primary: 'Zurich', sans-serif;
   --font-heading: 'Tiltil', sans-serif;
   --font-heading2:'NeuzeItOffice', sans-serif;
 }
 
 
-
-
-
-
 /************/
 /* ALGEMEEN */
 /************/
+  
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-beige);
   font-family: var(--font-primary);
   margin: 0; 
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-maintext);
   text-decoration: none;
 }
 
 p {
-  color: var(--color-text);
+  color: var(--color-maintext);
 }
 
 h2 {
@@ -93,7 +91,7 @@ select {
 /* HEADER */
 
 header {
-  background-color: var(--color-header);
+  background-color: var(--color-black);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -104,11 +102,48 @@ header {
 header h1 {
   padding-left: 0.25em;
   padding-right: 0.25em;
+  color: var(--color-white);
   font-family: var(--font-heading);
-  letter-spacing: 0.1em;
   font-size: 1em;
-  color: var(--color-heading-text);
+  letter-spacing: 0.1em;
   text-align: center;
+}
+
+header p {
+  order: -2;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  text-decoration: underline;
+  color: var(--color-white);
+  white-space: nowrap;
+  animation: slide-in-out 5s ease-in-out infinite;
+}
+
+/* header p animatie voor het sliden bron: https://blog.hubspot.com/website/scrolling-text-css#how-to-create-scrolling-text-css */
+@keyframes slide-in-out {
+  0% {
+    transform: translateX(100%); /* Begin buiten het scherm aan de rechterkant */
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0); /* Beweeg naar het midden */
+    opacity: 1; /* Maak zichtbaar */
+  }
+  40% {
+    opacity: 1; /* Blijf zichtbaar */
+  }
+  50% {
+    transform: translateX(0); /* Blijf in het midden */
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-100%); /* Beweeg naar buiten aan de linkerkant */
+    opacity: 0; /* Maak onzichtbaar */
+  }
+  100% {
+    transform: translateX(-100%); /* Blijf buiten zicht */
+  }
 }
 
 header > button:nth-of-type(1) {
@@ -128,7 +163,7 @@ header > button:nth-of-type(1) {
 }
 
 header > button:nth-of-type(1) span {
-  background-color: #fff;
+  background-color: var(--color-white);
   height: 2px;
   width: 100%;
 }
@@ -136,7 +171,7 @@ header > button:nth-of-type(1) span {
 header nav:nth-of-type(1) {
   position: fixed;
   inset: 0;
-  background-color: #000;
+  background-color: var(--color-black);
   transform: translateX(-100%);
 }
 
@@ -146,11 +181,13 @@ header nav li button {
   background-color: transparent; 
 }
 
+
+
 /* Search bar styling */
 header search {
   order:1;
   width: 100%; 
-  background-color: #f1f0ee;
+  background-color: var(--color-white);
   padding: 0.5em;
   position: relative;
 }
@@ -162,25 +199,20 @@ header search label {
 header search input {
   width: 100%; 
   padding: 0.75em; 
-  background-color: #f1f0ee; 
+  background-color: var(--color-white); 
   border: 1px;
   border-color: #111;
   font-size: 1rem;
   font-family: var(--font-primary);
-  color: var(--color-text); 
+  color: var(--color-black); 
 }
 
 header search input::placeholder {
-  color: var(--color-text); 
+  color: var(--color-maintext); 
   text-align: left;
 }
 
-header search input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none; /* Verwijderd het kruisje in het input veld */
-}
-
-
-header search button {
+/* header search button {
   position: absolute;
   right: 1em; 
   top: 50%;
@@ -189,13 +221,17 @@ header search button {
   border: none;
   cursor: pointer;
   font-size: 1.25em; 
-  color: var(--color-text); 
-}
+  color: var(--color-maintext); 
+} */
+
+/* search button nog niet af, moet nog een vergrootglas in ipv het woord zoeken */
+
+/* menu wordt een zwart vlak? */
 
 header nav:nth-of-type(2) ul {
   display: flex;
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
   list-style: none;
 }
 
@@ -204,21 +240,9 @@ header nav:nth-of-type(2) img {
 
 }
 
-header p {
-  order: -2;
-  width: 100%;
-  text-align: center;
-  font-size: 0.7rem;
-  text-decoration: underline;
-  color: var(--color-heading-text);
-}
-
-
-
 header nav:nth-of-type(1) {
   position: fixed;
   inset: 0;
-  background-color: #f1f0ee;
   transform: translateX(-100%); /* Menu verborgen */
   padding: 0.75em;
   display: flex;
@@ -242,7 +266,7 @@ header nav:nth-of-type(1) li:last-child {
 header nav:nth-of-type(1) a {
   display: block; 
   padding: 1em 0; 
-  color: #111; 
+  color: var(--color-black); 
   text-transform: uppercase; 
   font-size: 1.2em; 
 }
@@ -268,13 +292,231 @@ header nav.toonMenu {
 /*footer*/
 
 footer {
-  background-color: var(--color-header); 
+  background-color: var(--color-black); 
 }
 
-footer p {
-  color: var(--color-heading-text);
+footer > p:first-of-type {
+  color: var(--color-white);
   text-transform: uppercase;
   text-align: left;
   padding-top: 1em;
   padding-left: 1em;
+}
+
+
+/* Social media navigatie */
+
+/* Verberg de header visueel, maar laten zien voor screen readers */
+footer nav:nth-of-type(1) h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+footer nav:nth-of-type(1) ul {
+  padding: 0;
+  padding-left: 1em;
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
+}
+
+footer nav:nth-of-type(1) ul li {
+  margin: 0;
+  padding: 0;
+}
+
+footer nav:nth-of-type(1) a {
+  position: relative;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav:nth-of-type(1) ul li img {
+  width: 2em;
+  height: auto;
+}
+
+
+/* Styling voor Help & Info en Over TILTIL navigaties in de footer, bron voor de accordion (ook voor Javascript): https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+/* button stijl voor beide nav's */
+footer nav:nth-of-type(2) button,
+footer nav:nth-of-type(3) button {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  font-size: 1.5em;
+  padding-left: 1em;
+}
+
+
+footer nav:nth-of-type(2) ul li a,
+footer nav:nth-of-type(3) ul li a {
+  color: var(--color-white);
+  text-decoration: none; 
+  display: inline-block; 
+  padding: 0.1em; 
+}
+
+/* Accordion knoppen stijl */
+.accordion {
+  color: var(--color-black);
+  cursor: pointer;
+  padding: 1.125em; 
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+/* Panel (verborgen standaard) */
+.panel {
+  padding: 0 1.125em; 
+  background-color: var(--color-black);
+  display: none;
+  overflow: hidden;
+}
+
+/* Links in de ul-lijsten */
+footer nav ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.1em; 
+}
+
+/* Hover state */
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Focus state */
+footer nav ul li a:focus {
+  outline: 1px solid var(--color-white);
+  outline-offset: 2px; 
+}
+
+
+
+/* onderste section met betaalmogelijkheden en Trustpilot */
+
+/* Styling voor de footer sectie */
+footer section:nth-of-type(1) {
+  background-color: var(--color-beige);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+/* P-stijl */
+footer section:nth-of-type(1) > p {
+  font-size: 0.875em;
+  margin: 0; 
+  text-align: center;
+  color: var(--color-maintext);
+}
+
+footer section:nth-of-type(1) h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Trustpilot & betaalmogelijkheden sectie styling */
+footer section:nth-of-type(1) ul:nth-of-type(1),
+footer section:nth-of-type(1) ul:nth-of-type(2) {
+  display: flex; 
+  justify-content: center; 
+  padding: 0; 
+  list-style: none; 
+  gap: 0.5em;
+}
+
+/* Icoon afbeelding styling */
+footer section:nth-of-type(1) img {
+  max-width: 3em; 
+  height: auto; 
+}
+
+
+
+
+/* SCHAALBAAR */
+
+@media (min-width: 761px) {
+  footer .accordion {
+      display: none; /* Verberg de accordeonmenu's boven 760px */
+  }
+
+  footer nav {
+      display: inline-block; 
+      width: 32%; /* elke nav 32% van de breedte */
+      vertical-align: top; /* op 1 lijn staan */
+  }
+
+  footer nav:nth-of-type(1),
+  footer nav:nth-of-type(2),
+  footer nav:nth-of-type(3) {
+      width: 32%; /* gelijk over de breedte */
+  }
+
+  footer p {
+      text-align: center;
+  }
+
+  /* nog wat problemen met deze footer, H2's verdwijnen en als het menu ingeklapt is zijn ze sowieso niet te zien */
+
+
+
+
+  /* alles in de header iets groter */
+
+  header h1 {
+    font-size: 1.25em; 
+  }
+
+  header p {
+    font-size: 0.85rem; 
+  }
+
+  header nav:nth-of-type(1) a {
+    font-size: 1.5em; 
+  }
+
+  header button:nth-of-type(1) {
+    width: 1.5em; 
+    height: 1.5em;
+  }
+
+  header button:nth-of-type(1) span {
+    height: 3px; 
+  }
+
+  header nav:nth-of-type(2) img {
+    width: 1.5em; 
+  }
+
+  header nav:nth-of-type(2) select {
+    font-size: 1.25em; 
+  }
+
+  header nav:nth-of-type(2) li button img {
+    width: 3em; 
+  }
+
+  /* hartje schaalt niet goed mee */
+
 }

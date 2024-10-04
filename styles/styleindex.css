@@ -1,3 +1,60 @@
+@font-face {
+  font-family: 'Tiltil';
+  src: url('../fonts/Tiltil-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zurich';
+  src: url('../fonts/zurich.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeuzeItOffice';
+  src: url('../fonts/neuzeitoffice.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing: border-box;  
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  color-scheme: light dark;
+  --color-black: #111;
+  --color-beige: light-dark(#f1f0ee, #515151);
+  --color-maintext: light-dark (#fff, #111);
+  --color-grey-dark: #515151;
+  --color-white: #fff;
+  --font-primary: 'Zurich', sans-serif;
+  --font-heading: 'Tiltil', sans-serif;
+  --font-heading2:'NeuzeItOffice', sans-serif;
+}
+
+
+/************/
+/* ALGEMEEN */
+/************/
+
+
 /* bolletjes */
 
 body > main > section:nth-of-type(1) ul {
@@ -31,6 +88,7 @@ body > main > section:nth-of-type(1) li p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   text-align: center;
+  color: var(--color-maintext);
 }
   
   /* Voor alle banners */
@@ -41,8 +99,7 @@ body > main > section:nth-of-type(1) li p {
     margin-bottom: 0.5em;
 }
 
-  /* tweede sectie met de categorien */
-
+  /* tweede sectie met de categorien, hulp gehad van Choice met het positioneren van de A boven de IMG */
 
   /* Verberg visueel, maar laten zien voor screen readers bron: https://webaim.org/techniques/css/invisiblecontent/ */
 h2[aria-hidden="true"], h3 {
@@ -80,19 +137,17 @@ h2[aria-hidden="true"], h3 {
 
     grid-area: 1/1;
   }
-  
-  /* hulp gehad van Choice met het positioneren van de A boven de IMG */
 
   section:nth-of-type(2) ul a {
-    background-color: #000;
-    color: white;
-    padding: 1em 3em 1em 3em;
+    background-color: var(--color-black);
+    color: var(--color-white);
     display:block;
     grid-area: 1/1;
     align-self: start;
     margin-top: 12em;
     margin-left: 0.8em;
     margin-right: 0.8em;
+    padding: 1em 3em;
     cursor: pointer;
   }
 
@@ -100,6 +155,7 @@ h2[aria-hidden="true"], h3 {
     width: max-content;
   }
 
+  /* hover */
   section:nth-of-type(2) ul li:hover a {
     transform: scale(1.05);
     text-decoration: underline;
@@ -134,8 +190,8 @@ h2[aria-hidden="true"], h3 {
   /* banner met winkelmandje button */
   
   section:nth-of-type(3) button {
-    background-color: #000;
-    color: white;
+    background-color: var(--color-black);
+    color: var(--color-white);
     padding: 1em;
     border: none;
     cursor: pointer;
@@ -159,30 +215,36 @@ h2[aria-hidden="true"], h3 {
     cursor: pointer;
   }
 
+
+
+
 /* nieuwe interieur en gifts slider */
 
-/* section:nth-of-type(4) h2 { */
- /* font-size: 1.5em; */
-
-/* Algemene styling voor de 4e section */
+/*flexbox voor horizontale scroll */
 section:nth-of-type(4) ul {
+  display: flex;
+  gap: 1rem;
   padding: 0;
   list-style-type: none;
-  display: grid;
-  gap: 1rem;
+  overflow-x: auto; /* Voeg horizontale scroll toe */
+  scroll-behavior: smooth;
+  padding-bottom: 1rem; /* Voeg padding toe om scroll bar niet over content te plaatsen */
 }
 
+/*grid voor overlay van de items */
 section:nth-of-type(4) li {
   display: grid;
   grid-template-columns: 1fr max-content; /* Voor hartje en afbeelding */
   grid-template-rows: auto auto 1fr; /* Voor naam, prijs, afbeelding */
-  background-color: #f0f0f0;
+  background-color: var(--color-beige);
   padding: 1rem;
   align-items: start;
+  min-width: 250px; /* Breedte voor elk product zodat ze naast elkaar staan */
   position: relative;
 }
 
-/* Style voor de productafbeelding */
+
+/* productafbeelding */
 section:nth-of-type(4) li img:nth-of-type(2) {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
@@ -191,18 +253,19 @@ section:nth-of-type(4) li img:nth-of-type(2) {
 
 }
 
-/* Style voor de prijs */
+/*prijs */
 section:nth-of-type(4) li p:nth-of-type(1) {
   grid-column: 1 / span 2;
   grid-row: 4;
   margin: 0.5rem 0;
 }
 
-/* Style voor de new-tag */
+/*new-tag */
 section:nth-of-type(4) li p:nth-of-type(2) {
   grid-column: 1;
   grid-row: 1;
-  background-color: white;
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 0.3em 0.7em;
   justify-self: start;
   align-self: start;
@@ -211,16 +274,26 @@ section:nth-of-type(4) li p:nth-of-type(2) {
   left: 10px;
 }
 
-/* Style voor de productnaam */
+/* productnaam */
 section:nth-of-type(4) li a {
   grid-column: 1;
   grid-row: 3;
-  text-decoration: underline;
   font-weight: bold;
   margin: 0.5rem 0;
 }
 
-/* Style voor de wishlist button met hartje */
+/* Hover */
+section:nth-of-type(4) li a:hover {
+  text-decoration: underline; 
+}
+
+/* Focus */
+section:nth-of-type(4) li a:focus {
+  outline: 1px solid; 
+  outline-offset: 3px; /* Ruimte tussen de tekst en de omlijning */
+}
+
+/*hartje */
 section:nth-of-type(4) li img:nth-of-type(1) {
   width: 2em;
   height: 2em;
@@ -290,4 +363,24 @@ section:nth-of-type(5) li a:hover {
 section:nth-of-type(5) li a:focus-visible {
   opacity: 1;
   scale: 1; /* zelfde effect als hover voor toegankelijkheid */
+}
+
+
+
+
+/* SCHAALBAAR */
+
+
+/*  bolletjes  */
+@media (min-width: 555px) {
+  body > main > section:nth-of-type(1) ul {
+    justify-content: center; 
+    padding-left: 4em;  
+    padding-right: 4em; 
+  }
+
+  body > main > section:nth-of-type(1) ul li {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }  
 }
